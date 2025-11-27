@@ -1,4 +1,4 @@
-Feature: clockify
+Feature: Workspace
 
   @GetAllWorkspaces
   Scenario: Get all my workspaces
@@ -10,9 +10,9 @@ Feature: clockify
     * print response
     * define idWorkspace = $[0].id
 
-  @GetWorkspaceInfo @testGabo
+  @GetWorkspaceInfo
   Scenario: Get workspace info
-    Given call Clockify.feature@GetAllWorkspaces
+    Given call Workspace.feature@GetAllWorkspaces
     And base url https://api.clockify.me/api
     And endpoint /v1/workspaces/{{idWorkspace}}
     And header X-api-key = ODhiYWFiMzItNWNkZC00NWYzLWIxMmItZDcyNTQzYWU4N2Mw
