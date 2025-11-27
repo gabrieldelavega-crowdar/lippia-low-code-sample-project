@@ -6,7 +6,7 @@ Feature: Sample
     And header Accept = */*
 
 
-  @RickAndMorty @testGabo
+  @RickAndMorty
   Scenario Outline: Get character
     Given base url $(env.base_url_rickAndMorty)
     And endpoint character/<id_character>
